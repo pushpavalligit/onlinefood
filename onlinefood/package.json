@@ -1,5 +1,5 @@
 {
-    "name": "onlinefooddelivery",
+    "name": "onlinefood",
     "version": "1.0.0",
     "scripts": {
       "start": "cd backend/built/src && node server.js",
