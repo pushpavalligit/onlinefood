@@ -2,9 +2,12 @@
     "name": "onlinefood",
     "version": "1.0.0",
     "scripts": {
-      "start": "cd backend/built/src && node server.js",
-      "prebuild": "cd backend && npm run build",
-      "build": " cd frontend && npm run build"
-    }
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "client": "npm start --prefix client",
+      "clientinstall": "npm install --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client" 
+      }
 
 }
