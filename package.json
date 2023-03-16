@@ -8,7 +8,7 @@
     "scripts": {
       "start": "cd backend/built && node server.js",
       "prebuild": "cd backend && npm run build",
-      "build": "cd fronend && npm run build"
+      "build": "cd ../fronend && npm run build"
       }
 
 }
