@@ -2,8 +2,7 @@
     "name": "onlinefooddelivery",
     "version": "1.0.0",
     "engines": {
-      "node": ">=18 <19",
-      "npm": "8.x"
+      "node": ">=18 <19"
     },
     "scripts": {
       "start": "cd backend/built && node server.js",
