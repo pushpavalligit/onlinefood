@@ -19,6 +19,18 @@ app.use((0, cors_1["default"])({
     credentials: true,
     origin: ["http://localhost:4200"]
 }));
+app.use(function (req, res, next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Methods",
+        "GET,HEAD,OPTIONS,POST,PUT,DELETE"
+    );
+    res.header(
+        "Access-Control-Allow-Methods",
+        "Origins, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    next();
+});
 app.use("/api/foods", food_router_1["default"]);
 app.use("/api/users", user_router_1["default"]);
 app.use("/api/orders", order_router_1["default"]);

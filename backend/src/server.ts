@@ -15,6 +15,18 @@ app.use(cors({
     credentials:true,
     origin:["http://localhost:4200"]
 }));
+app.use(function (req, res, next){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Methods",
+        "GET,HEAD,OPTIONS,POST,PUT,DELETE"
+    );
+    res.header(
+        "Access-Control-Allow-Methods",
+        "Origins, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    next();
+});
 
 app.use("/api/foods", foodRouter);
 app.use("/api/users", userRouter);
