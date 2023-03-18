@@ -2,11 +2,10 @@
     "name": "onlinefooddelivery",
     "version": "1.0.0",
     "engines": {
-      "node": ">=18 <19"
+      "node": "16.8"
     },
     "scripts": {
       "start": "cd backend/built && node server.js",
-      "dev": "nodemon server.js",
       "prebuild": "cd backend && npm run build",
       "build": "cd frontend && npm run build"
       }
