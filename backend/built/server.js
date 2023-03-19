@@ -19,10 +19,10 @@ app.use((0, cors_1["default"])({
     credentials: true,
     origin: ["http://localhost:4200"]
 }));
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    res.header("Access-Control-Allow-Methods", "Origins, X-Requested-With, Content-Type, Accept, Authorization");
+app.use((req, res, next) =>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type,Accept, Authortization');  
+    res.setHeader('Acces-Control-Allow-Methods','GET, POST, PATCH, DELETE');
     next();
 });
 app.use("/api/foods", food_router_1["default"]);

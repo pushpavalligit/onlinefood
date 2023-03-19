@@ -1,17 +1,19 @@
 header{
   position: relative;
-  background: white;
+  background: #a41322;
   padding: 0;
   border-bottom: 1px solid red;
 }
 
 a{
-  color: #af1313;
+  color: white;
+  font-weight: 600;
 }
 a:hover{
   background:#e72929;
   color:white;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .container{
@@ -49,7 +51,7 @@ a span{
 .menu{
   position: absolute;
   z-index: 1;
-  background: whitesmoke;
+  background: #a41322;
   display: none;
 }
 .menu-container:hover .menu{
